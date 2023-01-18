@@ -1,23 +1,15 @@
-const person: {
-  name: string;
-  age: number;
-  hobbies: string[]
-  role: [number, string]
-} = {
-  name: "Ankit",
-  age: 25,
-  hobbies : ['Sports', 'Cooking'],
-  role: [2,'author']
-};
-
-let favActivity : string[]; // Telling JS that we will be storing string array.
-favActivity = ["Sports"];
-
-// let favoriteActivity: any[];
-// favoriteActivity = ['Sports', 1]
-
-console.log(person.name);
-
-for( const hobby of person.hobbies){
-  console.log(hobby.toUpperCase());
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    result = input1 + input2;
+  }else {
+    result = input1.toString() + input2.toString()
+  }
+  return result;
 }
+
+const combineAges = combine(30, 26);
+console.log(combineAges);
+
+const combineNames = combine("Max", "Anna");
+console.log(combineNames);
